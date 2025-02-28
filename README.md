@@ -15,7 +15,7 @@ Taking the latest version  as an example.
 
 1. Generate bitstream files and burn them into FPGA.
 
-For example, placing a bitstream file in `/ FPGA_inux/bitstreams/M64P64Q16R16S8/` folder.
+For example, placing a bitstream file in `./FPGA_inux/bitstreams/M64P64Q16R16S8/` folder.
 
 2. Enter `./FPGA_inux/linux-d river/run/` folder,run the script in the to collect data.
    
