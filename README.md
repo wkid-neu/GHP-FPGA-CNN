@@ -1,6 +1,6 @@
 # CYZ_paper
 
-## 文件说明
+## README
 1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
    
 2. The `Python`  folder stores compiler code.
