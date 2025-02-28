@@ -13,7 +13,7 @@ https://github.com/osmr/imgclsmob
 
 以最新版本的`M64P64`为例，其他的版本和加速器方法相同。
 
-1. 找到比特流文件并烧录到FPGA中。
+1. 导出比特流文件并烧录到FPGA中。
 例如，将比特流文件放在`./FPGA_linux//bitstreams/M64P64Q16R16S8/`中。
 
 2. 进入`./FPGA_linux/linux_driver/run/`文件夹下，运行这里面的脚本来采集数据。
