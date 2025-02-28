@@ -1,36 +1,39 @@
 # CYZ_paper
 
 ## 文件说明
-1. `FPGA_linux`文件夹存放硬件设计代码（Verilog和SystemVerilog）和驱动代码（C/C++）。
+1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
    
-2. `Python`文件夹存放编译器代码。
+2. The `Python`  folder stores compiler code.
 
-3. 所需的onnx模型在这里获得:
+3. The required onnx model can be obtained here:
 
 https://github.com/osmr/imgclsmob
 
-## 如何复现结果
+## How to reproduce the results
 
-以最新版本的`M64P64`为例，其他的版本和加速器方法相同。
+Taking the latest version  as an example.
 
-1. 导出比特流文件并烧录到FPGA中。
-例如，将比特流文件放在`./FPGA_linux/bitstreams/M64P64Q16R16S8/`中。
+1. Generate bitstream files and burn them into FPGA.
 
-2. 进入`./FPGA_linux/linux_driver/run/`文件夹下，运行这里面的脚本来采集数据。
+For example, placing a bitstream file in `/ FPGA_inux/bitstreams/M64P64Q16R16S8/` folder.
+
+2. Enter `./FPGA_inux/linux-d river/run/` folder,run the script in the to collect data.
    
-`run_model_e2e_perf.sh`用于采集各模型的端到端延时。
+`run_model_e2e_perf.sh` : End to end delay for collecting various models。
 
-`run_model_ins_perf.sh`用于采集各模型的各个指令的延时。
+`run_model_ins_perf.sh`: Used to collect the delay of each instruction for each model.
 
-`run_model_build_db.sh`用于构建卷积数据库，它采集的是各个Conv指令在静态和动态下的延时。
+`run_model_build_db.sh`: Used to build convolutional databases, it collects the latency of each Conv instruction in both static and dynamic states.
 
-`run_test_*`用于测试各个功能部件。
+`run_test_*`: Used for testing various functional components.
 
-所有采集到的原始数据都保存在`./FPGA_linux/linux_driver/exp_res/`文件夹下。
+All collected raw data is saved in `./FPGA_inux/linux-d river/extvres/`.
 
-3. 进入`./Python/ana/`，开始分析结果。
-首先运行脚本`merge_files.py`，把原始实验结果都copy到本文件夹下。
 
-然后运行脚本`run_ana.py`，开始分析每一个模型，结果保存在每个模型对应的加速器下的`res_*`文件中。
+3. Enter `./Python/ana/`，analyzing results
 
-然后运行脚本`plot.py`，开始绘制每个模型的性能图和推理延时占比图。
+Firstly, run the script `merge files. py` and copy all the original experimental results to this folder.
+
+Secondly, run the script `run_ana. py`to start analyzing each model, and save the results in the `res_ *` file under the accelerator corresponding to each model.
+
+Then, run the script `plot. py` to start plotting the performance and inference delay ratio of each model.
