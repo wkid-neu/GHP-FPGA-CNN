@@ -1,1 +1,1 @@
-这里存放量化过的onnx格式的模型
+This folder stores quantified onnx format models.
