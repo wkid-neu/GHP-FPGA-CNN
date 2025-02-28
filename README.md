@@ -5,6 +5,10 @@
    
 2. `Python`文件夹存放编译器代码。
 
+3. 所需的onnx模型在这里获得:
+
+https://github.com/osmr/imgclsmob
+
 ## 如何复现结果
 
 以最新版本`cnn_accel6`的`M64P64`为例，其他的版本和加速器方法相同。
