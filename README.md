@@ -1,4 +1,4 @@
-# CYZ_paper
+# Towards High-Performance Flexible FPGA-Based Accelerators for CNN Inference: General Hardware Architecture and End-to-End Deploying Toolflow 
 
 ## README
 1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
