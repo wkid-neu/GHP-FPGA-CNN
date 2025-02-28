@@ -1,1 +1,1 @@
-此文件夹下存放比特流文件
+This folder contains bitstream files
