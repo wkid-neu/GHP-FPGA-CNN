@@ -1,1 +1,1 @@
-这里存放编译器前端的输出 Compiler Front-end 
+This folder stores the output files of the compiler front-end
