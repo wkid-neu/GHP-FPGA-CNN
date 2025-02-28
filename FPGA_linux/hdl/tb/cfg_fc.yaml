@@ -1,0 +1,49 @@
+cases:
+  -
+    OC: 64
+    INC: 16
+    x_mode: T-mode
+  -
+    OC: 64
+    INC: 16
+    x_mode: V-mode
+  -
+    OC: 128
+    INC: 16
+    x_mode: T-mode
+  -
+    OC: 128
+    INC: 16
+    x_mode: V-mode
+  -
+    OC: 64
+    INC: 17
+    x_mode: T-mode
+  -
+    OC: 64
+    INC: 17
+    x_mode: V-mode
+  -
+    OC: 128
+    INC: 17
+    x_mode: T-mode
+  -
+    OC: 128
+    INC: 17
+    x_mode: V-mode
+  -
+    OC: 128
+    INC: 256
+    x_mode: V-mode
+  # -
+  #   OC: 128
+  #   INC: 256
+  #   x_mode: T-mode
+  # -
+  #   OC: 1024
+  #   INC: 1024
+  #   x_mode: T-mode
+  # -
+  #   OC: 1024
+  #   INC: 1024
+  #   x_mode: V-mode

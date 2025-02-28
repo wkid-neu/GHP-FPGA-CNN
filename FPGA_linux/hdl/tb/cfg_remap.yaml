@@ -1,0 +1,25 @@
+cases:
+  -
+    vec_size: 128
+  -
+    vec_size: 256
+  -
+    vec_size: 512
+  -
+    vec_size: 1024
+  -
+    vec_size: 2048
+  -
+    vec_size: 4096
+  -
+    vec_size: 8192
+  -
+    vec_size: 16384
+  -
+    vec_size: 32768
+  -
+    vec_size: 65536
+  -
+    vec_size: 131072
+  -
+    vec_size: 262144

@@ -1,0 +1,672 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 10 21:06:00 2024
+# Process ID: 433852
+# Current directory: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work
+# Command line: vivado -mode batch -source sim_conv.tcl
+# Log file: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/vivado.log
+# Journal file: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/vivado.jou
+# Running On: lvxing-System-Product-Name, OS: Linux, CPU Frequency: 2900.000 MHz, CPU Physical cores: 8, Host memory: 67259 MB
+#-----------------------------------------------------------
+source sim_conv.tcl
+# proc add_src {directory} {
+#     puts "Searching verilog files in ${directory}."
+#     foreach file [glob -nocomplain -types f "${directory}/*.v"] {
+#         add_files -fileset sources_1 $file
+#     }
+#     foreach file [glob -nocomplain -types f "${directory}/*.vh"] {
+#         add_files -fileset sources_1 $file
+#     }
+#     foreach dir [glob -nocomplain -types d "${directory}/*"] {
+#         if {$dir ne "." && $dir ne ".."} {
+#             add_src $dir
+#         }
+#     }
+# }
+# set proj_name "sim_conv"
+# set bd_name "verify_top"
+# set_param general.maxThreads 32
+# create_project $proj_name ./$proj_name -part xcvu9p-flga2104-2L-e -force 
+# set_property BOARD_PART xilinx.com:vcu118:part0:2.4 [current_project]
+# add_src "../src/"
+Searching verilog files in ../src/.
+Searching verilog files in ../src/ppus.
+Searching verilog files in ../src/dma.
+Searching verilog files in ../src/conf.
+Searching verilog files in ../src/exec.
+Searching verilog files in ../src/core.
+Searching verilog files in ../src/core/fc.
+Searching verilog files in ../src/core/remap.
+Searching verilog files in ../src/core/pool.
+Searching verilog files in ../src/core/pool/wb.
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+Searching verilog files in ../src/core/conv.
+Searching verilog files in ../src/core/conv/wb.
+Searching verilog files in ../src/core/conv/sa.
+Searching verilog files in ../src/core/add.
+Searching verilog files in ../src/mem.
+Searching verilog files in ../src/mem/mxm.
+Searching verilog files in ../src/mem/rtm.
+Searching verilog files in ../src/mem/bm.
+Searching verilog files in ../src/mem/cwm.
+Searching verilog files in ../src/mem/xphm.
+Searching verilog files in ../src/mem/im.
+Searching verilog files in ../src/misc.
+Searching verilog files in ../src/xbus.
+Searching verilog files in ../src/xbus/pkt_gen.
+# add_files -fileset sim_1 "../tb/tb_conv.sv"
+# source "bd_verify_top.tcl"
+## namespace eval _tcl {
+## proc get_script_folder {} {
+##    set script_path [file normalize [info script]]
+##    set script_folder [file dirname $script_path]
+##    return $script_folder
+## }
+## }
+## variable script_folder
+## set script_folder [_tcl::get_script_folder]
+## set scripts_vivado_version 2022.1
+## set current_vivado_version [version -short]
+## if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+##    puts ""
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+## 
+##    return 1
+## }
+## set list_projs [get_projects -quiet]
+## if { $list_projs eq "" } {
+##    create_project project_1 myproj -part xcvu9p-flga2104-2L-e
+##    set_property BOARD_PART xilinx.com:vcu118:part0:2.4 [current_project]
+## }
+## variable design_name
+## set design_name verify_top
+## set errMsg ""
+## set nRet 0
+## set cur_design [current_bd_design -quiet]
+## set list_cells [get_bd_cells -quiet]
+## if { ${design_name} eq "" } {
+##    # USE CASES:
+##    #    1) Design_name not set
+## 
+##    set errMsg "Please set the variable <design_name> to a non-empty value."
+##    set nRet 1
+## 
+## } elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+##    # USE CASES:
+##    #    2): Current design opened AND is empty AND names same.
+##    #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+##    #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+## 
+##    if { $cur_design ne $design_name } {
+##       common::send_gid_msg -ssname BD::TCL -id 2001 -severity "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+##       set design_name [get_property NAME $cur_design]
+##    }
+##    common::send_gid_msg -ssname BD::TCL -id 2002 -severity "INFO" "Constructing design in IPI design <$cur_design>..."
+## 
+## } elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+##    # USE CASES:
+##    #    5) Current design opened AND has components AND same names.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 1
+## } elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+##    # USE CASES: 
+##    #    6) Current opened design, has components, but diff names, design_name exists in project.
+##    #    7) No opened design, design_name exists in project.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 2
+## 
+## } else {
+##    # USE CASES:
+##    #    8) No opened design, design_name not in project.
+##    #    9) Current opened design, has components, but diff names, design_name not in project.
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2003 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+## 
+##    create_bd_design $design_name
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2004 -severity "INFO" "Making design <$design_name> as current_bd_design."
+##    current_bd_design $design_name
+## 
+## }
+INFO: [BD::TCL 103-2003] Currently there is no design <verify_top> in project, so creating one...
+Wrote  : </home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.srcs/sources_1/bd/verify_top/verify_top.bd> 
+INFO: [BD::TCL 103-2004] Making design <verify_top> as current_bd_design.
+## common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "verify_top".
+## if { $nRet != 0 } {
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" $errMsg}
+##    return $nRet
+## }
+## set bCheckIPsPassed 1
+## set bCheckIPs 1
+## if { $bCheckIPs == 1 } {
+##    set list_check_ips "\ 
+## xilinx.com:ip:axi_vip:1.1\
+## xilinx.com:ip:util_vector_logic:2.0\
+## "
+## 
+##    set list_ips_missing ""
+##    common::send_gid_msg -ssname BD::TCL -id 2011 -severity "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+## 
+##    foreach ip_vlnv $list_check_ips {
+##       set ip_obj [get_ipdefs -all $ip_vlnv]
+##       if { $ip_obj eq "" } {
+##          lappend list_ips_missing $ip_vlnv
+##       }
+##    }
+## 
+##    if { $list_ips_missing ne "" } {
+##       catch {common::send_gid_msg -ssname BD::TCL -id 2012 -severity "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+##       set bCheckIPsPassed 0
+##    }
+## 
+## }
+INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  
+xilinx.com:ip:axi_vip:1.1 xilinx.com:ip:util_vector_logic:2.0  .
+## set bCheckModules 1
+## if { $bCheckModules == 1 } {
+##    set list_check_mods "\ 
+## top\
+## "
+## 
+##    set list_mods_missing ""
+##    common::send_gid_msg -ssname BD::TCL -id 2020 -severity "INFO" "Checking if the following modules exist in the project's sources: $list_check_mods ."
+## 
+##    foreach mod_vlnv $list_check_mods {
+##       if { [can_resolve_reference $mod_vlnv] == 0 } {
+##          lappend list_mods_missing $mod_vlnv
+##       }
+##    }
+## 
+##    if { $list_mods_missing ne "" } {
+##       catch {common::send_gid_msg -ssname BD::TCL -id 2021 -severity "ERROR" "The following module(s) are not found in the project: $list_mods_missing" }
+##       common::send_gid_msg -ssname BD::TCL -id 2022 -severity "INFO" "Please add source files for the missing module(s) above."
+##       set bCheckIPsPassed 0
+##    }
+## }
+INFO: [BD::TCL 103-2020] Checking if the following modules exist in the project's sources:  
+top  .
+## if { $bCheckIPsPassed != 1 } {
+##   common::send_gid_msg -ssname BD::TCL -id 2023 -severity "WARNING" "Will not continue with creation of design due to the error(s) above."
+##   return 3
+## }
+## proc create_root_design { parentCell } {
+## 
+##   variable script_folder
+##   variable design_name
+## 
+##   if { $parentCell eq "" } {
+##      set parentCell [get_bd_cells /]
+##   }
+## 
+##   # Get object for parentCell
+##   set parentObj [get_bd_cells $parentCell]
+##   if { $parentObj == "" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+##      return
+##   }
+## 
+##   # Make sure parentObj is hier blk
+##   set parentType [get_property TYPE $parentObj]
+##   if { $parentType ne "hier" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+##      return
+##   }
+## 
+##   # Save current instance; Restore later
+##   set oldCurInst [current_bd_instance .]
+## 
+##   # Set parent object as current
+##   current_bd_instance $parentObj
+## 
+## 
+##   # Create interface ports
+## 
+##   # Create ports
+##   set main_clk [ create_bd_port -dir I -type clk -freq_hz 250000000 main_clk ]
+##   set main_rst [ create_bd_port -dir I -type rst main_rst ]
+##   set_property -dict [ list \
+##    CONFIG.POLARITY {ACTIVE_HIGH} \
+##  ] $main_rst
+##   set sa_clk [ create_bd_port -dir I -type clk -freq_hz 398437500 sa_clk ]
+## 
+## #*********************************************************
+## # cyz changed begin
+## # We should create the AXI-VIP IPs with the same order as they were created in the GUI
+## # to make the CONFIG.Component_Name correct.
+## #*********************************************************
+## 
+## #   # Create instance: ddr, and set properties
+## #   set ddr [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 ddr ]
+## #   set_property -dict [ list \
+## #    CONFIG.DATA_WIDTH {512} \
+## #    CONFIG.INTERFACE_MODE {SLAVE} \
+## #  ] $ddr
+## 
+## #   # Create instance: sr_cr, and set properties
+## #   set sr_cr [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 sr_cr ]
+## #   set_property -dict [ list \
+## #    CONFIG.ADDR_WIDTH {32} \
+## #    CONFIG.ARUSER_WIDTH {0} \
+## #    CONFIG.AWUSER_WIDTH {0} \
+## #    CONFIG.BUSER_WIDTH {0} \
+## #    CONFIG.DATA_WIDTH {32} \
+## #    CONFIG.HAS_BRESP {1} \
+## #    CONFIG.HAS_BURST {0} \
+## #    CONFIG.HAS_CACHE {0} \
+## #    CONFIG.HAS_LOCK {0} \
+## #    CONFIG.HAS_PROT {1} \
+## #    CONFIG.HAS_QOS {0} \
+## #    CONFIG.HAS_REGION {0} \
+## #    CONFIG.HAS_RRESP {1} \
+## #    CONFIG.HAS_WSTRB {1} \
+## #    CONFIG.ID_WIDTH {0} \
+## #    CONFIG.INTERFACE_MODE {MASTER} \
+## #    CONFIG.PROTOCOL {AXI4LITE} \
+## #    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+## #    CONFIG.RUSER_BITS_PER_BYTE {0} \
+## #    CONFIG.RUSER_WIDTH {0} \
+## #    CONFIG.SUPPORTS_NARROW {0} \
+## #    CONFIG.WUSER_BITS_PER_BYTE {0} \
+## #    CONFIG.WUSER_WIDTH {0} \
+## #  ] $sr_cr
+## 
+##   # Create instance: sr_cr, and set properties
+##   set sr_cr [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_0 ]
+##   set_property name sr_cr $sr_cr
+##   puts "----------------------------------------------"
+##   puts [get_property CONFIG.Component_Name $sr_cr]
+##   puts "----------------------------------------------"
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.ARUSER_WIDTH {0} \
+##    CONFIG.AWUSER_WIDTH {0} \
+##    CONFIG.BUSER_WIDTH {0} \
+##    CONFIG.DATA_WIDTH {32} \
+##    CONFIG.HAS_BRESP {1} \
+##    CONFIG.HAS_BURST {0} \
+##    CONFIG.HAS_CACHE {0} \
+##    CONFIG.HAS_LOCK {0} \
+##    CONFIG.HAS_PROT {1} \
+##    CONFIG.HAS_QOS {0} \
+##    CONFIG.HAS_REGION {0} \
+##    CONFIG.HAS_RRESP {1} \
+##    CONFIG.HAS_WSTRB {1} \
+##    CONFIG.ID_WIDTH {0} \
+##    CONFIG.INTERFACE_MODE {MASTER} \
+##    CONFIG.PROTOCOL {AXI4LITE} \
+##    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+##    CONFIG.RUSER_BITS_PER_BYTE {0} \
+##    CONFIG.RUSER_WIDTH {0} \
+##    CONFIG.SUPPORTS_NARROW {0} \
+##    CONFIG.WUSER_BITS_PER_BYTE {0} \
+##    CONFIG.WUSER_WIDTH {0} \
+##  ] $sr_cr
+## 
+##   # Create instance: ddr, and set properties
+##   set ddr [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip:1.1 axi_vip_0]
+##   set_property name ddr $ddr
+##   puts "----------------------------------------------"
+##   puts [get_property CONFIG.Component_Name $ddr]
+##   puts "----------------------------------------------"
+##   # cyz changed end
+##   set_property -dict [ list \
+##    CONFIG.DATA_WIDTH {512} \
+##    CONFIG.INTERFACE_MODE {SLAVE} \
+##  ] $ddr
+## 
+## #*********************************************************
+## # cyz changed end
+## #*********************************************************
+## 
+##   # Create instance: top, and set properties
+##   set block_name top
+##   set block_cell_name top
+##   if { [catch {set top [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+##      return 1
+##    } elseif { $top eq "" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+##      return 1
+##    }
+##   
+##   # Create instance: util_vector_logic_0, and set properties
+##   set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+##   set_property -dict [ list \
+##    CONFIG.C_OPERATION {not} \
+##    CONFIG.C_SIZE {1} \
+##    CONFIG.LOGO_FILE {data/sym_notgate.png} \
+##  ] $util_vector_logic_0
+## 
+##   # Create interface connections
+##   connect_bd_intf_net -intf_net sr_cr_M_AXI [get_bd_intf_pins sr_cr/M_AXI] [get_bd_intf_pins top/sr_cr_S_AXI]
+##   connect_bd_intf_net -intf_net top_dma_m_axi [get_bd_intf_pins ddr/S_AXI] [get_bd_intf_pins top/dma_m_axi]
+## 
+##   # Create port connections
+##   connect_bd_net -net main_clk_0_1 [get_bd_ports main_clk] [get_bd_pins ddr/aclk] [get_bd_pins sr_cr/aclk] [get_bd_pins top/main_clk]
+##   connect_bd_net -net main_rst_0_1 [get_bd_ports main_rst] [get_bd_pins top/main_rst] [get_bd_pins util_vector_logic_0/Op1]
+##   connect_bd_net -net sa_clk_0_1 [get_bd_ports sa_clk] [get_bd_pins top/sa_clk]
+##   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins ddr/aresetn] [get_bd_pins sr_cr/aresetn] [get_bd_pins util_vector_logic_0/Res]
+## 
+##   # Create address segments
+##   assign_bd_address -offset 0x00000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces sr_cr/Master_AXI] [get_bd_addr_segs top/sr_cr_S_AXI/reg0] -force
+##   assign_bd_address -offset 0x80000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces top/dma_m_axi] [get_bd_addr_segs ddr/S_AXI/Reg] -force
+## 
+## 
+##   # Restore current instance
+##   current_bd_instance $oldCurInst
+## 
+##   save_bd_design
+## }
+## create_root_design ""
+----------------------------------------------
+verify_top_axi_vip_0_0
+----------------------------------------------
+----------------------------------------------
+verify_top_axi_vip_0_1
+----------------------------------------------
+INFO: [IP_Flow 19-5107] Inferred bus interface 'main_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'main_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sa_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sa_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'main_rst' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'main_rst' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'dma_m_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sr_cr_S_AXI' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'main_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'main_rst'.
+INFO: [IP_Flow 19-4728] Bus Interface 'main_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'sr_cr_S_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'main_clk': Added interface parameter 'FREQ_HZ' with value '250000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'sa_clk': Added interface parameter 'FREQ_HZ' with value '398437500'.
+INFO: [IP_Flow 19-4728] Bus Interface 'main_rst': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'main_clk' has a fixed FREQ_HZ of '250000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'sa_clk' has a fixed FREQ_HZ of '398437500'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'sa_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Slave segment '/top/sr_cr_S_AXI/reg0' is being assigned into address space '/sr_cr/Master_AXI' at <0x0000_0000 [ 4K ]>.
+Slave segment '/ddr/S_AXI/Reg' is being assigned into address space '/top/dma_m_axi' at <0x8000_0000 [ 2G ]>.
+Wrote  : </home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.srcs/sources_1/bd/verify_top/verify_top.bd> 
+## common::send_gid_msg -ssname BD::TCL -id 2053 -severity "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
+WARNING: [BD::TCL 103-2053] This Tcl script was generated from a block design that has not been validated. It is possible that design <verify_top> may result in errors during validation.
+# make_wrapper -files [get_files ${proj_name}/${proj_name}.srcs/sources_1/bd/${bd_name}/${bd_name}.bd] -top
+Wrote  : </home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.srcs/sources_1/bd/verify_top/verify_top.bd> 
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/synth/verify_top.v
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/sim/verify_top.v
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/hdl/verify_top_wrapper.v
+# add_files -fileset sources_1 "${proj_name}/${proj_name}.gen/sources_1/bd/${bd_name}/hdl/${bd_name}_wrapper.v"
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# set_property top tb_conv [get_fileset sim_1]
+# generate_target Simulation [get_files ${proj_name}/${proj_name}.srcs/sources_1/bd/verify_top/verify_top.bd]
+INFO: [BD 41-1662] The design 'verify_top.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/synth/verify_top.v
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/sim/verify_top.v
+Verilog Output written to : /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/hdl/verify_top_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sr_cr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ddr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block top .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+Exporting to file /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/hw_handoff/verify_top.hwh
+Generated Hardware Definition File /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/synth/verify_top.hwdef
+# export_ip_user_files -of_objects [get_files ${proj_name}/${proj_name}.srcs/sources_1/bd/${bd_name}/${bd_name}.bd] -no_script -sync -force -quiet
+# export_simulation -simulator xsim -of_objects [get_files ${proj_name}/${proj_name}.srcs/sources_1/bd/${bd_name}/${bd_name}.bd] -directory ${proj_name}/${proj_name}.ip_user_files/sim_scripts -ip_user_files_dir ${proj_name}/${proj_name}.ip_user_files -ipstatic_source_dir ${proj_name}/${proj_name}.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+# launch_simulation -simset [get_filesets sim_1]
+Command: launch_simulation  -simset sim_1
+INFO: [Vivado 12-12493] Simulation top is 'tb_conv'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xsim/xsim.ini' copied to run dir:'/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_conv' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -L axi_vip_v1_1_12 -L xilinx_vip -prj tb_conv_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/Add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/Remap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/arr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_arr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/arr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu_arr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/bias_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_bias_fifo_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/bias_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_bias_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/bm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/c2d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_c2d
+INFO: [VRFC 10-311] analyzing module rtm_c2d_1_1
+INFO: [VRFC 10-311] analyzing module rtm_c2d_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/cmd_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr_1_1
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_sa_ctrl
+INFO: [VRFC 10-311] analyzing module Conv_sa_wx_fifo_reader
+INFO: [VRFC 10-311] analyzing module Conv_sa_inputs_ctrl
+INFO: [VRFC 10-311] analyzing module Conv_sa_output_fifo_writer
+INFO: [VRFC 10-311] analyzing module Conv_sa_dp_fifo_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/cwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_d2c
+INFO: [VRFC 10-311] analyzing module rtm_d2c_1_1
+INFO: [VRFC 10-311] analyzing module rtm_d2c_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/desc_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr_S_4
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr_S_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/desc_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_desc_fifo_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/disp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp_1_1
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/dp_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_dp_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/exec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/fc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/filter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_filter
+INFO: [VRFC 10-311] analyzing module xbus_filter_header_converter
+INFO: [VRFC 10-311] analyzing module xbus_filter_cache
+INFO: [VRFC 10-311] analyzing module xbus_filter_cache_wr
+INFO: [VRFC 10-311] analyzing module xbus_filter_cmd_gen
+INFO: [VRFC 10-311] analyzing module xbus_filter_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/filters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_filters
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/gather.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_gather
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_Remap
+INFO: [VRFC 10-311] analyzing module id_Add
+INFO: [VRFC 10-311] analyzing module id_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/mxm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/mxm/mxm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/mxm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_mxm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/pe_arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_pe_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/pkt_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/pool.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/ppu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu
+INFO: [VRFC 10-311] analyzing module ppu_mul
+INFO: [VRFC 10-311] analyzing module ppu_adder
+INFO: [VRFC 10-311] analyzing module ppu_shift
+INFO: [VRFC 10-311] analyzing module ppu_round
+INFO: [VRFC 10-311] analyzing module ppu_add_zero_point
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/ppus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre_P_eq_R
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre_P_gt_R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_ppus_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_ppus_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/rd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dma_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/rd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/rtm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/rtm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb_rtm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/rtm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_rtm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/sr_cr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_cr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/utils.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module posedge_det
+INFO: [VRFC 10-311] analyzing module shift_reg
+INFO: [VRFC 10-311] analyzing module gen_fake_sig
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-311] analyzing module tdp_bram
+INFO: [VRFC 10-311] analyzing module tdp_uram
+INFO: [VRFC 10-311] analyzing module sdp_uram
+INFO: [VRFC 10-311] analyzing module sdp_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/vec_fifos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_vec_fifos
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/w_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_w_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_wb
+INFO: [VRFC 10-311] analyzing module Fc_wb_1_1
+INFO: [VRFC 10-311] analyzing module Fc_wb_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/wr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dma_wr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/wr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_wr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wx_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wx_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/x_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_x_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/xbus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/xdma_usr_irq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xdma_usr_irq
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/xphm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/xphm_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_xphm_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_axi_vip_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_top_0/sim/verify_top_top_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_top_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_util_vector_logic_0_0/sim/verify_top_util_vector_logic_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_util_vector_logic_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/sim/verify_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/hdl/verify_top_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/tb/tb_conv.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 32 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L util_vector_logic_v2_0_2 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_conv_behav xil_defaultlib.tb_conv xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 32 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L util_vector_logic_v2_0_2 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_conv_behav xil_defaultlib.tb_conv xil_defaultlib.glbl -log elaborate.log 
+Using 32 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <Conv_sa_shift> not found while processing module instance <Conv_sa_shift_inst> [/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/conv.v:280]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+    while executing
+"launch_simulation -simset [get_filesets sim_1]"
+    (file "sim_conv.tcl" line 43)
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 21:06:28 2024...

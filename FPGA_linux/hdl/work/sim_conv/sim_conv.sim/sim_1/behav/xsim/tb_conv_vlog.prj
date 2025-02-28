@@ -1,0 +1,103 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../src/conf" --include "../../../../../../src" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../../../src/core/add/Add.v" \
+"../../../../../../src/core/remap/Remap.v" \
+"../../../../../../src/core/pool/arr.v" \
+"../../../../../../src/ppus/arr.v" \
+"../../../../../../src/core/pool/arr_ctrl.v" \
+"../../../../../../src/ppus/arr_ctrl.v" \
+"../../../../../../src/dma/axi_dma.v" \
+"../../../../../../src/dma/axi_dma_rd.v" \
+"../../../../../../src/dma/axi_dma_wr.v" \
+"../../../../../../src/core/conv/bias_fifo_wr.v" \
+"../../../../../../src/core/fc/bias_pre.v" \
+"../../../../../../src/mem/bm/bm.v" \
+"../../../../../../src/mem/rtm/c2d.v" \
+"../../../../../../src/xbus/pkt_gen/cmd_wr.v" \
+"../../../../../../src/core/conv/conv.v" \
+"../../../../../../src/core/conv/ctrl.v" \
+"../../../../../../src/mem/bm/ctrl.v" \
+"../../../../../../src/mem/cwm/cwm.v" \
+"../../../../../../src/mem/bm/d2c.v" \
+"../../../../../../src/mem/cwm/d2c.v" \
+"../../../../../../src/mem/im/d2c.v" \
+"../../../../../../src/mem/rtm/d2c.v" \
+"../../../../../../src/mem/xphm/d2c.v" \
+"../../../../../../src/core/conv/wb/desc_fifo_wr.v" \
+"../../../../../../src/core/pool/wb/desc_fifo_wr.v" \
+"../../../../../../src/xbus/pkt_gen/disp.v" \
+"../../../../../../src/core/conv/dp_fifo.v" \
+"../../../../../../src/exec/exec.v" \
+"../../../../../../src/core/fc/fc.v" \
+"../../../../../../src/xbus/filter.v" \
+"../../../../../../src/xbus/filters.v" \
+"../../../../../../src/exec/fsm.v" \
+"../../../../../../src/core/pool/wb/gather.v" \
+"../../../../../../src/exec/id.v" \
+"../../../../../../src/mem/im/im.v" \
+"../../../../../../src/mem/bm/mem.v" \
+"../../../../../../src/mem/cwm/mem.v" \
+"../../../../../../src/mem/im/mem.v" \
+"../../../../../../src/mem/mxm/mem.v" \
+"../../../../../../src/mem/rtm/mem.v" \
+"../../../../../../src/mem/xphm/mem.v" \
+"../../../../../../src/mem/mxm/mxm.v" \
+"../../../../../../src/xbus/mxm_wr.v" \
+"../../../../../../src/core/fc/pe.v" \
+"../../../../../../src/core/pool/pe.v" \
+"../../../../../../src/core/fc/pe_arr.v" \
+"../../../../../../src/xbus/pkt_gen/pkt_gen.v" \
+"../../../../../../src/core/pool/pool.v" \
+"../../../../../../src/ppus/ppu.v" \
+"../../../../../../src/ppus/ppus.v" \
+"../../../../../../src/core/conv/ppus_pre.v" \
+"../../../../../../src/core/fc/ppus_pre.v" \
+"../../../../../../src/core/pool/ppus_pre.v" \
+"../../../../../../src/core/add/pre.v" \
+"../../../../../../src/core/remap/pre.v" \
+"../../../../../../src/dma/rd_ctrl.v" \
+"../../../../../../src/mem/rtm/rd_ctrl.v" \
+"../../../../../../src/mem/rtm/rtm.v" \
+"../../../../../../src/core/conv/wb/rtm_wr.v" \
+"../../../../../../src/core/pool/wb/rtm_wr.v" \
+"../../../../../../src/misc/sr_cr.v" \
+"../../../../../../src/core/conv/sync.v" \
+"../../../../../../src/core/fc/sync.v" \
+"../../../../../../src/misc/utils.v" \
+"../../../../../../src/xbus/vec_fifos.v" \
+"../../../../../../src/core/fc/w_rd.v" \
+"../../../../../../src/core/add/wb.v" \
+"../../../../../../src/core/conv/wb/wb.v" \
+"../../../../../../src/core/fc/wb.v" \
+"../../../../../../src/core/pool/wb/wb.v" \
+"../../../../../../src/core/remap/wb.v" \
+"../../../../../../src/dma/wr_ctrl.v" \
+"../../../../../../src/mem/rtm/wr_ctrl.v" \
+"../../../../../../src/core/conv/wx_fifo.v" \
+"../../../../../../src/core/fc/x_rd.v" \
+"../../../../../../src/xbus/xbus.v" \
+"../../../../../../src/misc/xdma_usr_irq.v" \
+"../../../../../../src/mem/xphm/xphm.v" \
+"../../../../../../src/xbus/pkt_gen/xphm_rd.v" \
+"../../../../../../src/top.v" \
+
+sv xil_defaultlib  --include "../../../../../../src/conf" --include "../../../../../../src" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0_pkg.sv" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0.sv" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1_pkg.sv" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1.sv" \
+
+verilog xil_defaultlib  --include "../../../../../../src/conf" --include "../../../../../../src" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_top_0/sim/verify_top_top_0.v" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/ip/verify_top_util_vector_logic_0_0/sim/verify_top_util_vector_logic_0_0.v" \
+"../../../../sim_conv.ip_user_files/bd/verify_top/sim/verify_top.v" \
+"../../../../sim_conv.gen/sources_1/bd/verify_top/hdl/verify_top_wrapper.v" \
+
+sv xil_defaultlib  --include "../../../../../../src/conf" --include "../../../../../../src" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../../../tb/tb_conv.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

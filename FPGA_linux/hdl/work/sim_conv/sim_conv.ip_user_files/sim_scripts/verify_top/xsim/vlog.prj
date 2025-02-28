@@ -1,0 +1,14 @@
+sv xil_defaultlib --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" \
+"../../../bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0_pkg.sv" \
+"../../../bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0.sv" \
+"../../../bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1_pkg.sv" \
+"../../../bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1.sv" \
+
+verilog xil_defaultlib --include "/home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../sim_conv.gen/sources_1/bd/verify_top/ipshared/ec67/hdl" \
+"../../../bd/verify_top/ip/verify_top_top_0/sim/verify_top_top_0.v" \
+"../../../bd/verify_top/ip/verify_top_util_vector_logic_0_0/sim/verify_top_util_vector_logic_0_0.v" \
+"../../../bd/verify_top/sim/verify_top.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 10 21:05:12 2024
+# Process ID: 433510
+# Current directory: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work
+# Command line: vivado
+# Log file: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/vivado.log
+# Journal file: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/vivado.jou
+# Running On: lvxing-System-Product-Name, OS: Linux, CPU Frequency: 2900.000 MHz, CPU Physical cores: 8, Host memory: 67259 MB
+#-----------------------------------------------------------
+start_gui

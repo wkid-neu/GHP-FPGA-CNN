@@ -1,0 +1,8 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/lvxing/SSD1_500G/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 32 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_12 -L util_vector_logic_v2_0_2 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_conv_behav xil_defaultlib.tb_conv xil_defaultlib.glbl -log elaborate.log 
+Using 32 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <Conv_sa_shift> not found while processing module instance <Conv_sa_shift_inst> [/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/conv.v:280]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -1,0 +1,215 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/Add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/Remap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/arr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_arr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/arr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu_arr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/axi_dma_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/bias_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_bias_fifo_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/bias_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_bias_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/bm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/c2d.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_c2d
+INFO: [VRFC 10-311] analyzing module rtm_c2d_1_1
+INFO: [VRFC 10-311] analyzing module rtm_c2d_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/cmd_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr_1_1
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_cmd_wr_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_sa_ctrl
+INFO: [VRFC 10-311] analyzing module Conv_sa_wx_fifo_reader
+INFO: [VRFC 10-311] analyzing module Conv_sa_inputs_ctrl
+INFO: [VRFC 10-311] analyzing module Conv_sa_output_fifo_writer
+INFO: [VRFC 10-311] analyzing module Conv_sa_dp_fifo_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/cwm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_d2c
+INFO: [VRFC 10-311] analyzing module rtm_d2c_1_1
+INFO: [VRFC 10-311] analyzing module rtm_d2c_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/d2c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm_d2c
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/desc_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr_S_4
+INFO: [VRFC 10-311] analyzing module Conv_wb_desc_fifo_wr_S_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/desc_fifo_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_desc_fifo_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/disp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp_1_1
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_disp_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/dp_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_dp_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/exec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/fc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/filter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_filter
+INFO: [VRFC 10-311] analyzing module xbus_filter_header_converter
+INFO: [VRFC 10-311] analyzing module xbus_filter_cache
+INFO: [VRFC 10-311] analyzing module xbus_filter_cache_wr
+INFO: [VRFC 10-311] analyzing module xbus_filter_cmd_gen
+INFO: [VRFC 10-311] analyzing module xbus_filter_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/filters.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_filters
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/gather.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_gather
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/exec/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_Remap
+INFO: [VRFC 10-311] analyzing module id_Add
+INFO: [VRFC 10-311] analyzing module id_Conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/im.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/bm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/cwm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cwm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/im/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/mxm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/mxm/mxm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mxm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/mxm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_mxm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_PE
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/pe_arr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_pe_arr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/pkt_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/pool.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/ppu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppu
+INFO: [VRFC 10-311] analyzing module ppu_mul
+INFO: [VRFC 10-311] analyzing module ppu_adder
+INFO: [VRFC 10-311] analyzing module ppu_shift
+INFO: [VRFC 10-311] analyzing module ppu_round
+INFO: [VRFC 10-311] analyzing module ppu_add_zero_point
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/ppus/ppus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ppus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre_P_eq_R
+INFO: [VRFC 10-311] analyzing module Conv_ppus_pre_P_gt_R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_ppus_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/ppus_pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_ppus_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/pre.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap_pre
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/rd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dma_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/rd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_rd_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/rtm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/rtm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb_rtm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/rtm_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb_rtm_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/sr_cr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_cr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/utils.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module posedge_det
+INFO: [VRFC 10-311] analyzing module shift_reg
+INFO: [VRFC 10-311] analyzing module gen_fake_sig
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-311] analyzing module tdp_bram
+INFO: [VRFC 10-311] analyzing module tdp_uram
+INFO: [VRFC 10-311] analyzing module sdp_uram
+INFO: [VRFC 10-311] analyzing module sdp_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/vec_fifos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_vec_fifos
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/w_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_w_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/add/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Add_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wb/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_wb
+INFO: [VRFC 10-311] analyzing module Fc_wb_1_1
+INFO: [VRFC 10-311] analyzing module Fc_wb_N_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/pool/wb/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pool_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/remap/wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Remap_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/dma/wr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dma_wr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/rtm/wr_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtm_wr_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/conv/wx_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_wx_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/core/fc/x_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fc_x_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/xbus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/misc/xdma_usr_irq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xdma_usr_irq
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/mem/xphm/xphm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xphm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/xbus/pkt_gen/xphm_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xbus_pkt_gen_xphm_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_0/sim/verify_top_axi_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_axi_vip_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_axi_vip_0_1/sim/verify_top_axi_vip_0_1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_axi_vip_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_top_0/sim/verify_top_top_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_top_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/ip/verify_top_util_vector_logic_0_0/sim/verify_top_util_vector_logic_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_util_vector_logic_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.ip_user_files/bd/verify_top/sim/verify_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.gen/sources_1/bd/verify_top/hdl/verify_top_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module verify_top_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/tb/tb_conv.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lvxing/SSD1_500G/FPGAcode/cyzcode/FPGA_linux/cnn_accel6/hdl/work/sim_conv/sim_conv.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

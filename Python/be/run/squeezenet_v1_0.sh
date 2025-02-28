@@ -1,0 +1,8 @@
+bash squeezenet_v1_0_M32P32Q16R32S4.sh
+bash squeezenet_v1_0_M32P32Q16R16S8.sh
+bash squeezenet_v1_0_M32P64Q16R32S4.sh
+bash squeezenet_v1_0_M32P64Q16R16S8.sh
+bash squeezenet_v1_0_M32P96Q16R32S4.sh
+bash squeezenet_v1_0_M32P96Q16R16S8.sh
+bash squeezenet_v1_0_M64P64Q16R32S4.sh
+bash squeezenet_v1_0_M64P64Q16R16S8.sh

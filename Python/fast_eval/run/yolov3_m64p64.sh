@@ -1,0 +1,2 @@
+export PYTHONPATH=/home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6
+python3 /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fast_eval/main.py --cfg_fp /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fast_eval/run_cfg/yolov3_m64p64.yaml

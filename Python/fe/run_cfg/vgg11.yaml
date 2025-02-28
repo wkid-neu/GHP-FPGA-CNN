@@ -1,0 +1,8 @@
+# inputs
+ori_model_fp: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/quant/vgg11.onnx
+quant_model_fp: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/quant/vgg11-quan.onnx
+eval_dataset: ImageNetVal
+# outputs
+output_params_fp: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/vgg11/params.yaml
+output_ir_fp: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/vgg11/ir.onnx
+tmp_dir_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/vgg11/tmp

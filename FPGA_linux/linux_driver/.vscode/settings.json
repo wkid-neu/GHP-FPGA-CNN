@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "math.h": "c",
+        "stdio.h": "c",
+        "base.h": "c",
+        "utils.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "assert.h": "c"
+    }
+}

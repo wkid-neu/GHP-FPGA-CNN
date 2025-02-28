@@ -1,0 +1,16 @@
+# inputs
+ir_model_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/vgg19/ir.onnx
+params_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/vgg19/params.yaml
+M: 32
+P: 96
+Q: 16
+R: 16
+S: 8
+cwm_dep: 163840
+bm_dep: 8192
+im_dep: 1024
+xphm_dep: 8192
+rtm_dep: 65536
+cwm_prior_knowledge_fp: null
+# outputs
+output_dir_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/be_out/vgg19_M32P96Q16R16S8/

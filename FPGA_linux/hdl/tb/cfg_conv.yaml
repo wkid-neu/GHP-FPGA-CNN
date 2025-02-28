@@ -1,0 +1,169 @@
+cases:
+  # -
+  #   OC: 1024
+  #   INC: 960
+  #   INH_: 7
+  #   INW_ : 7
+  #   KH: 3
+  #   KW: 3
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 1
+  #   padR: 1
+  #   padU: 1
+  #   padD: 1
+  #   w_mode: dyn
+  -
+    OC: 128
+    INC: 64
+    INH_: 6
+    INW_ : 6
+    KH: 1
+    KW: 1
+    strideH: 1
+    strideW: 1
+    padL: 0
+    padR: 0
+    padU: 0
+    padD: 0
+    w_mode: sta
+  -
+    OC: 256
+    INC: 64
+    INH_: 7
+    INW_ : 7
+    KH: 3
+    KW: 3
+    strideH: 1
+    strideW: 1
+    padL: 1
+    padR: 1
+    padU: 1
+    padD: 1
+    w_mode: sta
+  -
+    OC: 128
+    INC: 64
+    INH_: 6
+    INW_ : 6
+    KH: 1
+    KW: 1
+    strideH: 1
+    strideW: 1
+    padL: 0
+    padR: 0
+    padU: 0
+    padD: 0
+    w_mode: dyn
+  -
+    OC: 256
+    INC: 64
+    INH_: 7
+    INW_ : 7
+    KH: 3
+    KW: 3
+    strideH: 1
+    strideW: 1
+    padL: 1
+    padR: 1
+    padU: 1
+    padD: 1
+    w_mode: dyn
+  # -
+  #   OC: 256
+  #   INC: 64
+  #   INH_: 9
+  #   INW_ : 9
+  #   KH: 3
+  #   KW: 3
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 1
+  #   padR: 1
+  #   padU: 1
+  #   padD: 1
+  #   w_mode: sta
+  # -
+  #   OC: 128
+  #   INC: 32
+  #   INH_: 112
+  #   INW_ : 112
+  #   KH: 3
+  #   KW: 3
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 1
+  #   padR: 1
+  #   padU: 1
+  #   padD: 1
+  #   w_mode: sta
+  # -
+  #   OC: 64
+  #   INC: 4
+  #   INH_: 224
+  #   INW_ : 224
+  #   KH: 7
+  #   KW: 7
+  #   strideH: 2
+  #   strideW: 2
+  #   padL: 3
+  #   padR: 3
+  #   padU: 3
+  #   padD: 3
+  #   w_mode: dyn
+  # -
+  #   OC: 64
+  #   INC: 4
+  #   INH_: 224
+  #   INW_ : 224
+  #   KH: 11
+  #   KW: 11
+  #   strideH: 4
+  #   strideW: 4
+  #   padL: 2
+  #   padR: 2
+  #   padU: 2
+  #   padD: 2
+  #   w_mode: dyn
+  # -
+  #   OC: 64
+  #   INC: 32
+  #   INH_: 28
+  #   INW_ : 28
+  #   KH: 3
+  #   KW: 3
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 1
+  #   padR: 1
+  #   padU: 1
+  #   padD: 1
+  #   w_mode: dyn
+  # -
+  #   OC: 128
+  #   INC: 128
+  #   INH_: 14
+  #   INW_ : 14
+  #   KH: 3
+  #   KW: 3
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 1
+  #   padR: 1
+  #   padU: 1
+  #   padD: 1
+  #   w_mode: dyn
+  # -
+  #   OC: 256
+  #   INC: 64
+  #   INH_: 7
+  #   INW_ : 7
+  #   KH: 1
+  #   KW: 1
+  #   strideH: 1
+  #   strideW: 1
+  #   padL: 0
+  #   padR: 0
+  #   padU: 0
+  #   padD: 0
+  #   w_mode: dyn

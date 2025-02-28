@@ -1,0 +1,16 @@
+# inputs
+ir_model_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/selecsls42b/ir.onnx
+params_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/fe_out/selecsls42b/params.yaml
+M: 64
+P: 64
+Q: 16
+R: 32
+S: 4
+cwm_dep: 81920
+bm_dep: 8192
+im_dep: 1024
+xphm_dep: 8192
+rtm_dep: 65536
+cwm_prior_knowledge_fp: null
+# outputs
+output_dir_path: /home/lvxing/SSD1_500G/FPGAcode/cyzcode/Python/cnn_accel6/be_out/selecsls42b_M64P64Q16R32S4/
