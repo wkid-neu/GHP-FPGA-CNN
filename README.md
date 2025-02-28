@@ -9,7 +9,7 @@
 
 https://github.com/osmr/imgclsmob
 
-## How to reproduce the results
+## How to reproduce the results.
 
 Taking the latest version  as an example.
 
@@ -19,7 +19,7 @@ For example, placing a bitstream file in `/ FPGA_inux/bitstreams/M64P64Q16R16S8/
 
 2. Enter `./FPGA_inux/linux-d river/run/` folder,run the script in the to collect data.
    
-`run_model_e2e_perf.sh` : End to end delay for collecting various models。
+`run_model_e2e_perf.sh` : End to end delay for collecting various models.
 
 `run_model_ins_perf.sh`: Used to collect the delay of each instruction for each model.
 
@@ -30,7 +30,7 @@ For example, placing a bitstream file in `/ FPGA_inux/bitstreams/M64P64Q16R16S8/
 All collected raw data is saved in `./FPGA_inux/linux-d river/extvres/`.
 
 
-3. Enter `./Python/ana/`，analyzing results
+3. Enter `./Python/ana/`，analyzing results.
 
 Firstly, run the script `merge files. py` and copy all the original experimental results to this folder.
 
