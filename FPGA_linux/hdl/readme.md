@@ -1,6 +1,22 @@
-## 文件说明
-1. `constr`存放约束文件。
-2. `src`存放硬件设计源文件。
-3. `tb`存放验证代码。
-4. `tools`存放工具代码。
-5. `work`是工作区，运行一些tcl脚本。
+# Folder Description
+
+## 1. 'const' stores
+
+Constraint files.
+
+## 2. 'src' stores
+
+Hardware source files.
+ 
+## 3. 'tb' 
+
+ Verification code.
+ 
+## 4. Tools 
+
+Tools code.
+
+## 5 'Work' 
+
+TCL scripts.
+
