@@ -20,7 +20,9 @@ This project is dual-licensed under the following terms:
 ### Patent Notice
 This code is protected by patents (e.g., Patent No. US1234567).  
 - **Non-commercial use** is permitted under AGPL-3.0.  
-- **Commercial use** requires explicit patent authorization.  
+- **Commercial use** requires explicit patent authorization.
+
+## File structure
 
 1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
    
