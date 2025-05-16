@@ -15,7 +15,7 @@ This project is dual-licensed under the following terms:
   - Use the code in closed-source products.  
   - Modify the code without open-sourcing derivative works.  
   - Access priority technical support and updates.  
-- To obtain a commercial license, contact us at [sales@yourcompany.com](mailto:sales@yourcompany.com).  
+- To obtain a commercial license, contact us at [wugang@mail.neu.edu.cn](wugang@mail.neu.edu.cn).  
 
 ### Patent Notice
 This code is protected by patents (e.g., Patent No. US1234567).  
