@@ -18,7 +18,7 @@ This project is dual-licensed under the following terms:
 - To obtain a commercial license, contact us at [wugang@mail.neu.edu.cn](wugang@mail.neu.edu.cn).  
 
 ### Patent Notice
-This code is protected by patents (e.g., Patent No. US1234567).  
+This code is protected by patents (Patent No. ZL202310288488.1).  
 - **Non-commercial use** is permitted under AGPL-3.0.  
 - **Commercial use** requires explicit patent authorization.
 
