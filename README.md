@@ -24,13 +24,13 @@ This code is protected by patents (Patent No. ZL202310288488.1).
 
 ## File structure
 
-1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
-   
-2. The `Python`  folder stores compiler code.
+root/
+├── LICENSE          # license
+├── NOTICE           # Patent and Third Party Component Declaration
+├── README.md        # readme
+├── FPGA_linux/      # hardware design code (Verilog and SystemVerilog) and driver code (C/C++)
+└── Python/          # compiler code
 
-3. The required onnx model can be obtained here:
-
-https://github.com/osmr/imgclsmob
 
 ## How to reproduce the results.
 
