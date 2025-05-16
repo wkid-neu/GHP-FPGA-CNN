@@ -1,4 +1,13 @@
-## 文件说明
-1. `bitstreams`存放用于实验的几个加速器的比特流文件，可以直接烧录到FPGA进行实验，复现实验数据。
-2. `hdl`存放硬件设计代码。
-3. `linux_driver`存放Linux下的驱动代码，用于调用硬件完成实验。
+# Folder Description
+
+## 1. `bitstreams`
+
+Bit stream files for accelerators of different scales，it can be directly burned onto FPGA for experimentation and replicated.
+
+## 2. `hdl`
+
+Hardware code.
+
+## 3. `linux_driver`
+
+Driver code under Linux, used to call hardware to complete experiments.
