@@ -1,14 +1,14 @@
 # Folder Description
 
-## 1. 'const' stores
+## 1. const
 
 Constraint files.
 
-## 2. 'src' stores
+## 2. src
 
 Hardware source files.
  
-## 3. 'tb' 
+## 3. tb 
 
  Verification code.
  
@@ -16,7 +16,7 @@ Hardware source files.
 
 Tools code.
 
-## 5 'Work' 
+## 5 Work 
 
 TCL scripts.
 
