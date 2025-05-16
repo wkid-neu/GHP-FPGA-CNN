@@ -1,8 +1,6 @@
 # Towards High-Performance Flexible FPGA-Based Accelerators for CNN Inference: General Hardware Architecture and End-to-End Deploying Toolflow 
 
-## README
-
-1.License
+## License
 
 This project is dual-licensed under the following terms:
 
@@ -24,11 +22,11 @@ This code is protected by patents (e.g., Patent No. US1234567).
 - **Non-commercial use** is permitted under AGPL-3.0.  
 - **Commercial use** requires explicit patent authorization.  
 
-2. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
+1. The `FPGA_linux` folder stores hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
    
-3. The `Python`  folder stores compiler code.
+2. The `Python`  folder stores compiler code.
 
-4. The required onnx model can be obtained here:
+3. The required onnx model can be obtained here:
 
 https://github.com/osmr/imgclsmob
 
