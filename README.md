@@ -22,11 +22,11 @@ This code is protected by patents (Patent No. ZL202310288488.1).
 - **Non-commercial use** is permitted under AGPL-3.0.  
 - **Commercial use** requires explicit patent authorization.
 
-## File structure
+## Folder Description
 
-`/FPGA_linux ` : hardware design code (Verilog and SystemVerilog) and driver code (C/C++)
+`/FPGA_linux ` : Hardware design code (Verilog and SystemVerilog) and driver code (C/C++).
 
-`/Python` : compiler code
+`/Python` : Compiler code.
 
 
 
