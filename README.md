@@ -26,15 +26,20 @@ This code is protected by patents (Patent No. ZL202310288488.1).
 
 root/
 
-├── LICENSE          # license
+├── LICENSE          
+# license
 
-├── NOTICE           # Patent and Third Party Component Declaration
+├── NOTICE           
+# Patent and Third Party Component Declaration
 
-├── README.md        # readme
+├── README.md        
+# readme
 
-├── FPGA_linux/      # hardware design code (Verilog and SystemVerilog) and driver code (C/C++)
+├── FPGA_linux/      
+# hardware design code (Verilog and SystemVerilog) and driver code (C/C++)
 
-└── Python/          # compiler code
+└── Python/          
+# compiler code
 
 
 
