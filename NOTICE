@@ -10,19 +10,18 @@
    请联系 [wugang@mail.neu.edu.cn](mailto:wugang@mail.neu.edu.cn) 获取商业授权协议。
 
 ## 第三方组件
-- [组件A]：遵循 [MIT协议](https://github.com/osmr/imgclsmob)；
+- [imgclsmob]：遵循 [MIT协议](https://github.com/osmr/imgclsmob)；
 
 # Patent Notice and Open Source License
 
 ## Patent Rights Statement
-1. This project incorporates Chinese invention patents (e.g., Patent No. ZLXXXXXXXX.X), owned by [Your Name/Company].
+1. This project incorporates Chinese invention patents (Patent No. ZL202310288488.1), owned by [Wugang].
 2. Under the "Patent Law of the People's Republic of China", no entity or individual may exploit the patent for production or business purposes without written authorization from the patent holder.
 
 ## Open Source License Terms
 1. The code is open-sourced under the [AGPL-3.0 License](LICENSE) for personal non-commercial use.
 2. **Commercial use** (including integration into commercial products, SaaS offerings, or resale) requires a separate patent license agreement.  
-   Contact [license@yourcompany.com](mailto:license@yourcompany.com) for commercial terms.
+   Contact [wugang@mail.neu.edu.cn]](mailto:wugang@mail.neu.edu.cn]) for commercial terms.
 
 ## Third-Party Components
-- [Component A]: Licensed under [MIT License](link);
-- [Component B]: Licensed under [BSD 3-Clause](link).
+- [imgclsmob]: Licensed under [MIT License](https://github.com/osmr/imgclsmob);
